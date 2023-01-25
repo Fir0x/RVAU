@@ -6,6 +6,8 @@ public class RecipeBook : ScriptableObject
 {
     [SerializeField] private List<Potion> _recipes;
 
+    public List<Potion> Recipes { get {return _recipes; } }
+
     public Potion GetPotion(List<RecipeElement> recipeElements)
     {
         return _recipes.Find(p => p.CheckRecipe(recipeElements));

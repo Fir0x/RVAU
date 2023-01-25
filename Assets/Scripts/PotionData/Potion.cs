@@ -11,6 +11,7 @@ public class Potion : Ingredient
 
     public Material Material { get { return _material; } }
     public float ProductionDuration { get { return _productionDuration; } }
+    public List<RecipeElement> Recipe { get { return _recipe; } }
 
     protected override void Awake()
     {
