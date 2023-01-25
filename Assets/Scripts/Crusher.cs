@@ -4,53 +4,44 @@ using UnityEngine;
 
 public class Crusher : MonoBehaviour
 {
-    private RecipeElement _content = null;
+    private RessourceInstance _processedRessource;
     private Material _material;
     private bool _isProducing = false;
+    private float _crushingDuration;
 
     private void Awake()
     {
         _material = GetComponent<MeshRenderer>().material;
     }
 
-    public void AddIngredient(Ingredient ingredient)
+    public bool AddRessource(RessourceInstance ressource)
     {
-        if (_content == null) // Cruhser is empty
-        {
-            _content = new RecipeElement(ingredient);
-        }
-        else if (!_content.Crushed && _content.GetIngredientGUID() == ingredient.Guid) // Crusher contains instances of the same ingredient not crushed
-        {
-            _content.IncrementCount();
-        }
-        else // Crusher is already crushed or contains instances of another ingredient
-        {
-            // TODO Reject different ingredient
-            // Send it back to ingredient spawn ? 
-            throw new System.NotImplementedException("Reject different ingredient");
-        }
+        if (_processedRessource != null || _isProducing
+            || ressource.RessourceType == Ingredient.Type.CrushableRessource)
+            return false;
+
+        _crushingDuration = (ressource.RessourceData as CrushableRessource).CrushingDuration;
+        _processedRessource = ressource;
+
+        return true;
     }
 
     public IEnumerator CrushIngredient()
     {
         _isProducing = true;
         
-        yield return new WaitForSeconds(_content.CrushDuration);
-
-        _content.Crush();
-        // TODO Change material to crushed
+        yield return new WaitForSeconds(_crushingDuration);
 
         _isProducing = false;
     }
 
-    public RecipeElement RetrieveCrushedIngredient()
+    public bool RetrieveCrushedIngredient()
     {
         if (_isProducing)
-            return null;
+            return false;
 
-        RecipeElement crushedIngredient = _content;
-        _content = null;
+        _processedRessource.Crush();
 
-        return crushedIngredient;
+        return true;
     }
 }

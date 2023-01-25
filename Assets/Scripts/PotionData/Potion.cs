@@ -12,6 +12,13 @@ public class Potion : Ingredient
     public Material Material { get { return _material; } }
     public float ProductionDuration { get { return _productionDuration; } }
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        _ingredientType = Type.Potion;
+    }
+
     public bool CheckRecipe(List<RecipeElement> recipeToTest)
     {
         if (recipeToTest.Count != _recipe.Count)

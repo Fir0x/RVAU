@@ -14,13 +14,18 @@ public class Cauldron : MonoBehaviour
         _material = GetComponent<MeshRenderer>().material;
     }
 
-    public void AddIngredient(Ingredient ingredient)
+    public bool AddIngredient(Ingredient ingredient)
     {
+        if (ingredient.IngredientType == Ingredient.Type.Potion || _isProducing)
+            return false;
+
         RecipeElement ingredientGroup = _content.Find(e => e.GetIngredientGUID() == ingredient.Guid);
         if (ingredientGroup != null)
             ingredientGroup.IncrementCount();
         else
             _content.Add(new RecipeElement(ingredient));
+
+        return true;
     }
 
     public IEnumerator ProducePotion()
