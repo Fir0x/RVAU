@@ -6,11 +6,6 @@ public class RecipeElement
 {
     [SerializeField] private Ingredient _ingredient;
     [SerializeField] private int _count;
-    [SerializeField] private bool _crushed = false;
-    [SerializeField] private float _crushDuration = 5.0f;
-
-    public bool Crushed { get { return _crushed; } }
-    public float CrushDuration { get { return _crushDuration; } }
 
     public RecipeElement(Ingredient ingredient)
     {
@@ -37,10 +32,5 @@ public class RecipeElement
     public void IncrementCount()
     {
         _count++;
-    }
-
-    public void Crush()
-    {
-        _crushed = true;
     }
 }

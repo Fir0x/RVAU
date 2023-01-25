@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Cauldron : MonoBehaviour
+public class Mixer : MonoBehaviour
 {
     private List<RecipeElement> _content;
     private Material _material;
@@ -14,21 +15,19 @@ public class Cauldron : MonoBehaviour
         _material = GetComponent<MeshRenderer>().material;
     }
 
-    public bool AddIngredient(Ingredient ingredient)
+    public void AddIngredient(Ingredient potion)
     {
-        if (ingredient.IngredientType == Ingredient.Type.Potion || _isProducing)
-            return false;
+        if (!(potion is Potion))
+            throw new ArgumentException("Ingredient type should be a Potion.\n");
 
-        RecipeElement ingredientGroup = _content.Find(e => e.GetIngredientGUID() == ingredient.Guid);
+        RecipeElement ingredientGroup = _content.Find(e => e.GetIngredientGUID() == potion.Guid);
         if (ingredientGroup != null)
             ingredientGroup.IncrementCount();
         else
-            _content.Add(new RecipeElement(ingredient));
-
-        return true;
+            _content.Add(new RecipeElement(potion));
     }
 
-    public IEnumerator ProducePotion()
+    public IEnumerator MixPotions()
     {
         _createdPotion = GameManager.Instance.GetPotion(_content);
 
