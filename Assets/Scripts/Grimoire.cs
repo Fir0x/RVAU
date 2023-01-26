@@ -20,7 +20,11 @@ public class Grimoire : MonoBehaviour
             throw new System.Exception("A potion cannot have more ingredients than displayable by the grimoire.");
 
         for (int i = 0; i < potion.Recipe.Count; i++) {
-            _ingredients[i].SetText(potion.Recipe[i].Ingredient.Name);
+            _ingredients[i].SetText(potion.Recipe[i].Count + "x " + potion.Recipe[i].Ingredient.Name);
+        }
+
+        for (int i = potion.Recipe.Count; i < _ingredients.Count; i++) {
+            _ingredients[i].SetText("");
         }
     }
 
