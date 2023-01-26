@@ -897,6 +897,8 @@ MonoBehaviour:
   - {fileID: 1118967821}
   - {fileID: 1774758526}
   - {fileID: 758493724}
+  _previousPageButton: {fileID: 568440905}
+  _nextPageButton: {fileID: 1094957113}
 --- !u!1 &922490777
 GameObject:
   m_ObjectHideFlags: 0
