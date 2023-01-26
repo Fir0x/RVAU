@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781d55edb5976994498ba93923d5f014, type: 3}
+  m_Name: Tomato sauce
+  m_EditorClassIdentifier: 
+  _name: Tomato sauce
+  _material: {fileID: 0}
+  _recipe:
+  - _ingredient: {fileID: 11400000, guid: 7ca14418d723cc54aa7a34fd424db8d8, type: 2}
+    _count: 2
+  - _ingredient: {fileID: 11400000, guid: c7b04b352954bd04f980de0dc5edbbdc, type: 2}
+    _count: 1
+  _productionDuration: 5

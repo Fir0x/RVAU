@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d5e7af77e29a544899e82317a870bb7, type: 3}
-  m_Name: RecipeBook
+  m_Script: {fileID: 11500000, guid: 0009a9d89d5a14849a72f9446a544a6d, type: 3}
+  m_Name: Tomato
   m_EditorClassIdentifier: 
-  _recipes:
-  - {fileID: 11400000, guid: a968b494ea0f9a54596a622ab89084d1, type: 2}
-  - {fileID: 11400000, guid: e0cdedbec230ccf4590e464534c491db, type: 2}
+  _name: Tomato
+  _mesh: {fileID: 0}
+  _crushingDuration: 2
+  _endRessource: {fileID: 0}
