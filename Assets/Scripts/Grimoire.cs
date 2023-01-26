@@ -8,29 +8,30 @@ public class Grimoire : MonoBehaviour
 {
     [SerializeField] private RecipeBook _recipeBook;
     [SerializeField] private TMP_Text _name;
-    [SerializeField] private List<TMP_Text> _ingredients;
+    [SerializeField] private TMP_Text _ingredients;
     [SerializeField] private Button _previousPageButton;
     [SerializeField] private Button _nextPageButton;
 
     private List<Potion> _recipes;
     private int _currentPage = 0;
 
+    private const int _maxIngredients = 7;
 
     void SetPage()
     {
         Potion potion = _recipes[_currentPage];
         _name.SetText(potion.Name);
 
-        if (potion.Recipe.Count > _ingredients.Count)
+        string recipe = "";
+
+        if (potion.Recipe.Count > _maxIngredients)
             throw new System.Exception("A potion cannot have more ingredients than displayable by the grimoire.");
 
-        for (int i = 0; i < potion.Recipe.Count; i++) {
-            _ingredients[i].SetText(potion.Recipe[i].Count + "x " + potion.Recipe[i].Ingredient.Name);
-        }
+        for (int i = 0; i < potion.Recipe.Count; i++)
+            recipe += potion.Recipe[i].Count + "x " + potion.Recipe[i].Ingredient.Name + "\n";
 
-        for (int i = potion.Recipe.Count; i < _ingredients.Count; i++) {
-            _ingredients[i].SetText("");
-        }
+        _ingredients.SetText(recipe);
+
     }
 
     // Start is called before the first frame update
