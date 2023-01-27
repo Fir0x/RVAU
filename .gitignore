@@ -79,16 +79,3 @@ Assets/Scenes/Experimentals
 
 # Blender tmp files
 *.blend[1-9]*
-
-# Oculus files
-Assets/Oculus*
-Assets/Resources*
-Assets/XR*
-Packages/manifest.json
-Packages/packages-lock.json
-
-# Photon files
-Assets/Photon*
-
-# VR test scene
-Assets/Scenes/VR Tests*
