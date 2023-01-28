@@ -5,10 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewPotion", menuName = "")]
 public class Potion : Ingredient
 {
+    [SerializeField] private Sprite _icon;
     [SerializeField] private Material _material;
     [SerializeField] private List<RecipeElement> _recipe;
     [SerializeField] private float _productionDuration = 5.0f;
 
+    public Sprite Icon { get { return _icon; } }
     public Material Material { get { return _material; } }
     public float ProductionDuration { get { return _productionDuration; } }
     public List<RecipeElement> Recipe { get { return _recipe; } }
