@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class MarketRessource : MonoBehaviour
 {
     [SerializeField] private Ressource _ressource;
@@ -19,6 +20,7 @@ public class MarketRessource : MonoBehaviour
         }
         else
         {
+            _priceText.SetText("");
             Destroy(this.gameObject);
         }
     }
