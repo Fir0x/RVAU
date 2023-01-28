@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 67323325}
   - component: {fileID: 67323324}
   - component: {fileID: 67323323}
+  - component: {fileID: 67323326}
   m_Layer: 5
   m_Name: Commands
   m_TagString: Untagged
@@ -226,6 +227,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &67323326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67323321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904bd49a6303c6242bbd6df5f5fee3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recipeBook: {fileID: 11400000, guid: fc5928e659427dc4890cf3af11188453, type: 2}
+  _commandsDisplay:
+  - {fileID: 746531518}
+  - {fileID: 196889272}
+  - {fileID: 971652438}
+  - {fileID: 349451398}
 --- !u!1 &81837205
 GameObject:
   m_ObjectHideFlags: 0
