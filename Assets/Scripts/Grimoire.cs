@@ -8,6 +8,7 @@ public class Grimoire : MonoBehaviour
 {
     [SerializeField] private RecipeBook _recipeBook;
     [SerializeField] private TMP_Text _name;
+    [SerializeField] private Image _icon;
     [SerializeField] private TMP_Text _ingredients;
     [SerializeField] private Button _previousPageButton;
     [SerializeField] private Button _nextPageButton;
@@ -21,6 +22,7 @@ public class Grimoire : MonoBehaviour
     {
         Potion potion = _recipes[_currentPage];
         _name.SetText(potion.Name);
+        _icon.sprite = potion.Icon;
 
         string recipe = "";
 
