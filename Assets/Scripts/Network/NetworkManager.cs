@@ -7,7 +7,6 @@ using Photon.Realtime;
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
     private bool _isInRoom;
-    private int 
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +19,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = true;
 
         _isInRoom = false;
+        Debug.Log("HO HI MARK");
     }
 
     public void ConnectToNetwork()
@@ -39,13 +39,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     override public void OnPlayerEnteredRoom(Player otherPlayer)
     {
-        m_playerCount++;
+/*        m_playerCount++;
 
         networkStatus.Invoke("" + m_playerCount);
 
         if (PhotonNetwork.IsMasterClient && m_playerCount == 1)
         {
             PhotonNetwork.LoadLevel(1);
-        }
+        }*/
     }
 }
