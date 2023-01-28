@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a7c5687fd083a646807e4804cea0864, type: 3}
-  m_Name: Basilic
+  m_Script: {fileID: 11500000, guid: c1039869020aa3c45aa4487239f15b72, type: 3}
+  m_Name: Garlic clove
   m_EditorClassIdentifier: 
-  _name: Basilic
+  _name: Garlic clove
   _mesh: {fileID: -8707441474030730945, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
-  _price: 3
+  _price: 15

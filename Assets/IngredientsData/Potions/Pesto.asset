@@ -17,5 +17,7 @@ MonoBehaviour:
   _material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   _recipe:
   - _ingredient: {fileID: 11400000, guid: c7b04b352954bd04f980de0dc5edbbdc, type: 2}
+    _count: 3
+  - _ingredient: {fileID: 11400000, guid: 789810aa87afa5642af8d60d32223464, type: 2}
     _count: 1
   _productionDuration: 5

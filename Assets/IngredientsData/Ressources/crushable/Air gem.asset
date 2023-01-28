@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0009a9d89d5a14849a72f9446a544a6d, type: 3}
+  m_Name: Air gem
+  m_EditorClassIdentifier: 
+  _name: Air gem
+  _mesh: {fileID: 6313733894324979165, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
+  _price: 9
+  _crushingDuration: 4
+  _endRessource: {fileID: 11400000, guid: f2932010f29ea7f4fac093f5325197cd, type: 2}

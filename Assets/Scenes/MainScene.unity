@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: a6d5f5156fcfc4d4d922dc262d34719f, type: 2}
   _priceText: {fileID: 1275517418}
   _bank: {fileID: 1951994320}
 --- !u!64 &81837208
@@ -1966,7 +1966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 240}
+  m_AnchoredPosition: {x: 0, y: 220}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855356173
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: 0bc46237e5a19a24f994be8618477048, type: 2}
   _priceText: {fileID: 1279777347}
   _bank: {fileID: 1951994320}
 --- !u!64 &898079690
@@ -2589,7 +2589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -98.33}
+  m_AnchoredPosition: {x: 0, y: -95}
   m_SizeDelta: {x: 441.826, y: 540.486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118967821
@@ -2623,9 +2623,6 @@ MonoBehaviour:
 
     2x Slug''s blood
 
-    2x Slug''s blood
-
-    2x Slug''s blood
 
 
 '
@@ -2665,8 +2662,8 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 29.1
+  m_characterSpacing: 3.3
+  m_wordSpacing: 30
   m_lineSpacing: 45
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -2804,7 +2801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 11400000, guid: 7ca14418d723cc54aa7a34fd424db8d8, type: 2}
+  _ressource: {fileID: 11400000, guid: 7e6a313680e7ce346963d99c6e82ced2, type: 2}
   _priceText: {fileID: 1322589780}
   _bank: {fileID: 1951994320}
 --- !u!64 &1170238394
@@ -4013,7 +4010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: 7da8fd14478b7894eb44365a1d0355d6, type: 2}
   _priceText: {fileID: 778181882}
   _bank: {fileID: 1951994320}
 --- !u!64 &1635182811
@@ -4132,7 +4129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: 7ca14418d723cc54aa7a34fd424db8d8, type: 2}
   _priceText: {fileID: 1920766696}
   _bank: {fileID: 1951994320}
 --- !u!64 &1675724170
@@ -4716,7 +4713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: 44582f668cc5d274b9e0d0119ae1abe9, type: 2}
   _priceText: {fileID: 269329758}
   _bank: {fileID: 1951994320}
 --- !u!64 &1793435977
@@ -5138,7 +5135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: a8a63ad1bb7ab3a4a97a96926f4aca05, type: 2}
   _priceText: {fileID: 832419426}
   _bank: {fileID: 1951994320}
 --- !u!64 &1928311624
@@ -5257,7 +5254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: 647c565541545c74ba5ef3e681241158, type: 2}
   _priceText: {fileID: 1269757805}
   _bank: {fileID: 1951994320}
 --- !u!64 &1936371116
