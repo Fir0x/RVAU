@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
-public class NetworkManager : MonoBehaviour
+public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    private bool _isInRoom;
+    private int 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,22 +19,21 @@ public class NetworkManager : MonoBehaviour
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.AutomaticallySyncScene = true;
 
+        _isInRoom = false;
     }
-/*
+
     public void ConnectToNetwork()
     {
-        if (!m_connected)
+        Debug.Log("CLICK CLICK\n");
+        if (!_isInRoom)
         {
-            m_connected = true;
-
-            networkStatus.Invoke("Connecting...");
-
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.IsVisible = false;
             roomOptions.MaxPlayers = 2;
-            PhotonNetwork.JoinOrCreateRoom("Room 237", roomOptions, TypedLobby.Default);
 
-            networkStatus.Invoke("Waiting for other player...");
+            PhotonNetwork.JoinOrCreateRoom("Game", roomOptions, TypedLobby.Default);
+            Debug.Log("I joined a room!\n");
+            _isInRoom = true;
         }
     }
 
@@ -44,5 +47,5 @@ public class NetworkManager : MonoBehaviour
         {
             PhotonNetwork.LoadLevel(1);
         }
-    }*/
+    }
 }
