@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MarketRessource : MonoBehaviour
 {
     [SerializeField] private Ressource _ressource;
+    [SerializeField] private TMP_Text _priceText;
     [SerializeField] private Bank _bank;
 
     private void Start()
@@ -13,6 +15,7 @@ public class MarketRessource : MonoBehaviour
         {
             this.GetComponent<MeshFilter>().mesh = _ressource.Mesh;
             this.GetComponent<MeshCollider>().sharedMesh = _ressource.Mesh;
+            _priceText.SetText(_ressource.Price.ToString());
         }
         else
         {
