@@ -7,6 +7,9 @@ public class RecipeElement
     [SerializeField] private Ingredient _ingredient;
     [SerializeField] private int _count;
 
+    public Ingredient Ingredient { get { return _ingredient; } }
+    public int Count { get { return _count; } }
+
     public RecipeElement(Ingredient ingredient)
     {
         _ingredient = ingredient;

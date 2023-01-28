@@ -5,5 +5,8 @@ using UnityEngine;
 public class Ressource : Ingredient
 {
     [SerializeField] private Mesh _mesh;
+    [SerializeField] private int _price = 10;
+
     public Mesh Mesh { get { return _mesh; } }
+    public int Price { get { return _price; } }
 }
