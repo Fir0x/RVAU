@@ -638,6 +638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3627838179101369340, guid: d6de99e88919438409d7e94aedf1498d, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1936987282}
     - target: {fileID: 6613368622387637133, guid: d6de99e88919438409d7e94aedf1498d, type: 3}
       propertyPath: EnableRotation
       value: 0
@@ -893,6 +897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ebf55a8f8182b4183e2c7a7532c0f7, type: 3}
+--- !u!20 &1640372083 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6613368622395037911, guid: d6de99e88919438409d7e94aedf1498d, type: 3}
+  m_PrefabInstance: {fileID: 977166048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1736428652
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,9 +989,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
-        m_MethodName: DoClick
+      - m_Target: {fileID: 197931591}
+        m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
+        m_MethodName: ConnectToNetwork
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1135,7 +1144,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1640372083}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1186,7 +1195,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  pointer: {fileID: 0}
+  pointer: {fileID: 1374582643}
   sortOrder: 0
 --- !u!1 &1906069670
 GameObject:
@@ -1323,3 +1332,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906069670}
   m_CullTransparentMesh: 1
+--- !u!1 &1936987282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6613368622394728047, guid: d6de99e88919438409d7e94aedf1498d, type: 3}
+  m_PrefabInstance: {fileID: 977166048}
+  m_PrefabAsset: {fileID: 0}
