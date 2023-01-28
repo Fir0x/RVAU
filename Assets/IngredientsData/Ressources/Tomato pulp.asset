@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Tomato pulp
   m_EditorClassIdentifier: 
   _name: Tomato pulp
-  _mesh: {fileID: 0}
+  _mesh: {fileID: -8707441474030730945, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
+  _price: 10

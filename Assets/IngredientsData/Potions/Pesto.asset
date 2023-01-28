@@ -17,6 +17,4 @@ MonoBehaviour:
   _recipe:
   - _ingredient: {fileID: 11400000, guid: c7b04b352954bd04f980de0dc5edbbdc, type: 2}
     _count: 1
-    _crushed: 0
-    _crushDuration: 0
   _productionDuration: 5

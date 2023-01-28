@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Basilic
   m_EditorClassIdentifier: 
   _name: Basilic
-  _rawMesh: {fileID: 6313733894324979165, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
-  _coreMesh: {fileID: 0}
+  _mesh: {fileID: -8707441474030730945, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}

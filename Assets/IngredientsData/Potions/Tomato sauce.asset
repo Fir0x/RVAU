@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tomato sauce
   m_EditorClassIdentifier: 
   _name: Tomato sauce
-  _material: {fileID: 0}
+  _material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   _recipe:
   - _ingredient: {fileID: 11400000, guid: 7ca14418d723cc54aa7a34fd424db8d8, type: 2}
     _count: 2
