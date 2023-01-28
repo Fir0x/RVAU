@@ -13,24 +13,14 @@ public class PlatformSwitch : MonoBehaviour
     [SerializeField] private Platform _platform;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-#if UNITY_ANDROID
+# if PLATFORM_ANDROID 
         if (_platform == Platform.PC)
-        {
             Destroy(gameObject);
-        }
 #else
         if (_platform == Platform.VR)
-        {
             Destroy(gameObject);
-        }
 #endif
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
