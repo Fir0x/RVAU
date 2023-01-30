@@ -14,6 +14,8 @@ public class TestEventRelay : MonoBehaviour
     IEnumerator Launcher()
     {
         yield return new WaitForSeconds(5);
+
+        _relay.RaiseTest(gameObject.GetInstanceID());
     }
 
     public void Test(int value, bool isRpc)
