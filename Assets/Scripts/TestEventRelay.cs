@@ -13,9 +13,9 @@ public class TestEventRelay : MonoBehaviour
 
     IEnumerator Launcher()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
-        _relay.RaiseTest(gameObject.GetInstanceID());
+        _relay.RaiseTest(gameObject.GetInstanceID(), false);
     }
 
     public void Test(int value, bool isRpc)
@@ -26,6 +26,7 @@ public class TestEventRelay : MonoBehaviour
 #else
         debug = "PC";
 #endif
-        Debug.Log($"Platform is {debug}. Value received is {value}. {(isRpc ? "Remote" : "Local")}");
+        string callType = isRpc ? "Remote" : "Local";
+        Debug.Log($"Platform is {debug}. Value received is {value}. {callType}");
     }
 }
