@@ -19,7 +19,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("START NM!");
     }
 
-    override public void OnConnectedToMaster()
+    public override void OnConnectedToMaster()
     {
         Debug.Log("Connected to Master");
 
@@ -30,9 +30,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinOrCreateRoom("Game", roomOptions, TypedLobby.Default);
     }
 
-    override public void OnPlayerEnteredRoom(Player otherPlayer)
+    public override void OnPlayerEnteredRoom(Player otherPlayer)
     {
         Debug.Log("Other player entered Room");
         PhotonNetwork.LoadLevel(2);
+    }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        Debug.LogError("Failed to join room: " + message);
     }
 }
