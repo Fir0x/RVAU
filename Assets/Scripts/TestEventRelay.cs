@@ -22,7 +22,7 @@ public class TestEventRelay : MonoBehaviour
     {
         string debug;
 #if UNITY_ANDROID
-        debug = "VR"
+        debug = "VR";
 #else
         debug = "PC";
 #endif

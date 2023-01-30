@@ -15,10 +15,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         // Setup Photon connection
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.AutomaticallySyncScene = true;
+
+        Debug.Log("START NM!");
     }
 
     override public void OnConnectedToMaster()
     {
+        Debug.Log("Connected to Master");
+
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.IsVisible = false;
         roomOptions.MaxPlayers = 2;
@@ -28,6 +32,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     override public void OnPlayerEnteredRoom(Player otherPlayer)
     {
+        Debug.Log("Other player entered Room");
         PhotonNetwork.LoadLevel(2);
     }
 }
