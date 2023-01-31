@@ -8,16 +8,15 @@ public class Cauldron : MonoBehaviour
     private Potion _createdPotion;
     private bool _isBrewing = false;
 
-    [SerializeField] private MeshRenderer _renderer;
+    [SerializeField] private MeshRenderer _liquidRenderer;
     private Material _material;
-
-    private void Awake()
-    {
-        _material = _renderer.material;
-    }
 
     private void Start()
     {
+        if (_liquidRenderer == null)
+            return;
+
+        _material = _liquidRenderer.material;
         _material.SetInteger("IsPotion", 0);
     }
 
