@@ -9,4 +9,6 @@ public abstract class Ressource : Ingredient
 
     public Mesh Mesh { get { return _mesh; } }
     public int Price { get { return _price; } }
+
+    public abstract Color Color { get; }
 }

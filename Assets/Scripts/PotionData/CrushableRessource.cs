@@ -10,6 +10,7 @@ public class CrushableRessource : Ressource
 
     public float CrushingDuration { get { return _crushingDuration; } }
     public EndRessource EndRessource { get { return _endRessource; } }
+    public override Color Color { get { return _endRessource.Color; } }
 
     protected override void Awake()
     {
