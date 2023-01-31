@@ -18,6 +18,6 @@ MonoBehaviour:
   _recipe:
   - _ingredient: {fileID: 11400000, guid: 8cfe6de1d35d8e74e9afc579357b3b5e, type: 2}
     _count: 1
-  - _ingredient: {fileID: 11400000, guid: 7e6a313680e7ce346963d99c6e82ced2, type: 2}
+  - _ingredient: {fileID: 11400000, guid: b0c90c7d070a61f409feb68c74530293, type: 2}
     _count: 2
   _productionDuration: 5
