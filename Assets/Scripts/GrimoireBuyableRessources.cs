@@ -13,6 +13,7 @@ public class GrimoireBuyableRessources : MonoBehaviour
         if (_ressource)
         {
             this.GetComponent<MeshFilter>().mesh = _ressource.Mesh;
+            this.GetComponent<Renderer>().material.color = _ressource.Color;
             _nameText.SetText(_ressource.Name);
         }
         else

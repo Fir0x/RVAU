@@ -16,6 +16,7 @@ public class MarketRessource : MonoBehaviour
         {
             this.GetComponent<MeshFilter>().mesh = _ressource.Mesh;
             this.GetComponent<MeshCollider>().sharedMesh = _ressource.Mesh;
+            this.GetComponent<Renderer>().material.color = _ressource.Color;
             _priceText.SetText(_ressource.Price.ToString());
         }
         else
