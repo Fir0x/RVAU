@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ressource : Ingredient
+public abstract class Ressource : Ingredient
 {
     [SerializeField] private Mesh _mesh;
     [SerializeField] private int _price = 10;
