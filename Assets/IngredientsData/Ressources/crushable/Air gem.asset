@@ -16,4 +16,4 @@ MonoBehaviour:
   _mesh: {fileID: 6313733894324979165, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
   _price: 9
   _crushingDuration: 4
-  _endRessource: {fileID: 11400000, guid: f2932010f29ea7f4fac093f5325197cd, type: 2}
+  _endRessource: {fileID: 11400000, guid: 1e11d595338979e49a54bdff3f207e17, type: 2}
