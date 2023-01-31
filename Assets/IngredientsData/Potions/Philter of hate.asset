@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781d55edb5976994498ba93923d5f014, type: 3}
+  m_Name: Philter of hate
+  m_EditorClassIdentifier: 
+  _name: Philter of hate
+  _icon: {fileID: 21300000, guid: 0f2710df8dce95846a1dfbcb6acdc902, type: 3}
+  _material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  _recipe:
+  - _ingredient: {fileID: 11400000, guid: 8cfe6de1d35d8e74e9afc579357b3b5e, type: 2}
+    _count: 1
+  - _ingredient: {fileID: 11400000, guid: b0c90c7d070a61f409feb68c74530293, type: 2}
+    _count: 2
+  _productionDuration: 5

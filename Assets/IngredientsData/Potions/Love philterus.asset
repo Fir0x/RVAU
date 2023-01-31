@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781d55edb5976994498ba93923d5f014, type: 3}
+  m_Name: Love philterus
+  m_EditorClassIdentifier: 
+  _name: Love philterus
+  _icon: {fileID: 21300000, guid: 8e84af3e10e00d649842a8dcd24f878c, type: 3}
+  _material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  _recipe:
+  - _ingredient: {fileID: 11400000, guid: 8bfda3597b8436d45a80f3ece43b96f9, type: 2}
+    _count: 2
+  - _ingredient: {fileID: 11400000, guid: dd60a5ad3569c8741a6be2e29c1cbc94, type: 2}
+    _count: 2
+  - _ingredient: {fileID: 11400000, guid: 6bb34556710c9f34ea41ec85502fc911, type: 2}
+    _count: 1
+  - _ingredient: {fileID: 11400000, guid: 1e11d595338979e49a54bdff3f207e17, type: 2}
+    _count: 1
+  _productionDuration: 5
