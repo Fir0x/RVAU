@@ -9,6 +9,7 @@ public class RessourceInstance : MonoBehaviour
 
     private MeshFilter _meshFilter;
     private Material _material;
+    private MeshCollider _meshCollider;
 
     public Ressource RessourceData { get { return _ressourceData; } }
     public Ingredient.Type RessourceType { get { return _ressourceData.IngredientType; } }
@@ -17,12 +18,14 @@ public class RessourceInstance : MonoBehaviour
     {
         _meshFilter = GetComponent<MeshFilter>();
         _material = GetComponent<MeshRenderer>().material;
+        _meshCollider = GetComponent<MeshCollider>();
     }
 
     public void SetRessource(Ressource ressourceData)
     {
         _ressourceData = ressourceData;
         _meshFilter.mesh = _ressourceData.Mesh;
+        _meshCollider.sharedMesh = _ressourceData.Mesh;
         _material.SetColor("Color", _ressourceData.Color);
     }
 

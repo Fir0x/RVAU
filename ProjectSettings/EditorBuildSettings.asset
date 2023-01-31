@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VRMenu.unity
     guid: 553b4948ddbd5624d96ebfbd65675141
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PCMenu.unity
     guid: 83d7e1b6ded602d45a1a4519bed9cdad
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 18242d6b80011ea4298437a565e5d8b2
   - enabled: 1
