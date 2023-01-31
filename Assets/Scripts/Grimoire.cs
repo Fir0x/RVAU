@@ -14,6 +14,7 @@ public class Grimoire : MonoBehaviour
     [SerializeField] private TMP_Text _ingredients;
     [SerializeField] private Button _previousPageButton;
     [SerializeField] private Button _nextPageButton;
+    [SerializeField] private Button _firstPageButton;
 
     private List<Potion> _recipes;
     private int _currentPage = 0;
@@ -74,6 +75,7 @@ public class Grimoire : MonoBehaviour
     {
         _previousPageButton.onClick.AddListener(PreviousPage);
         _nextPageButton.onClick.AddListener(NextPage);
+        _firstPageButton.onClick.AddListener(GoToFirstPage);
     }
 
     void PreviousPage()
@@ -91,6 +93,12 @@ public class Grimoire : MonoBehaviour
         if (_currentPage >= _totalPages)
             _currentPage = 0;
 
+        SetPage();
+    }
+
+    void GoToFirstPage()
+    {
+        _currentPage = 0;
         SetPage();
     }
 }
