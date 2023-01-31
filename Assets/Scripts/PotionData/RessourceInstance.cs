@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RessourceInstance : MonoBehaviour
 {
-    [SerializeField] private Ressource _ressourceData;
+    private Ressource _ressourceData;
     private bool _isCrushed = false;
 
-    [SerializeField] private MeshFilter _meshFilter;
+    private MeshFilter _meshFilter;
 
     public Ressource RessourceData { get { return _ressourceData; } }
     public Ingredient.Type RessourceType { get { return _ressourceData.IngredientType; } }
@@ -16,6 +16,11 @@ public class RessourceInstance : MonoBehaviour
     {
         _meshFilter = GetComponent<MeshFilter>();
         _meshFilter.mesh = _ressourceData.Mesh;
+    }
+
+    public void SetRessource(Ressource ressourceData)
+    {
+        _ressourceData = ressourceData;
     }
 
     public void Crush()
