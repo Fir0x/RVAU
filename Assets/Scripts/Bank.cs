@@ -13,17 +13,20 @@ public class Bank : MonoBehaviour
         _goldCounter.SetText(_gold.ToString());
     }
 
-    public void Buy(Ressource ressource)
+    public bool Buy(int ressourceIndex)
     {
+        Ressource ressource = GameManager.Instance.GetRessource(ressourceIndex);
         if (_gold >= ressource.Price)
         {
             _gold -= ressource.Price;
             _goldCounter.SetText(_gold.ToString());
             Debug.Log("Gold: " + _gold);
+            return true;
         }
         else
         {
             Debug.Log("Not enough gold");
+            return false;
         }
     }
 }

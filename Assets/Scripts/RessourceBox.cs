@@ -6,16 +6,16 @@ public class RessourceBox : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private GameObject _ressourcePrefab;
-    [SerializeField] Ressource _ressourceData;
 
     [Header("Debug")]
     [SerializeField] private float _debugSize = 0.02f;
 
-    public void SpawnRessource()
+    public void SpawnRessource(Ressource ressourceData)
     {
         var instance = Instantiate(_ressourcePrefab, _spawnPoint.position, Quaternion.identity);
         var ressourceInstance = instance.GetComponent<RessourceInstance>();
-        ressourceInstance.SetRessource(_ressourceData);
+
+        ressourceInstance.SetRessource(ressourceData);
     }
 
     private void OnDrawGizmos()

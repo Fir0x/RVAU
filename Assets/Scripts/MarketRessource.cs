@@ -6,29 +6,31 @@ using TMPro;
 
 public class MarketRessource : MonoBehaviour
 {
-    [SerializeField] private Ressource _ressource;
+    [SerializeField] private int _ressourceIndex = -1;
+    private Ressource _ressource;
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private Bank _bank;
 
     private void Start()
     {
-        if (_ressource)
+        if (_ressourceIndex >= 0)
         {
-            this.GetComponent<MeshFilter>().mesh = _ressource.Mesh;
-            this.GetComponent<MeshCollider>().sharedMesh = _ressource.Mesh;
-            this.GetComponent<Renderer>().material.color = _ressource.Color;
+            _ressource = GameManager.Instance.GetRessource(_ressourceIndex);
+            GetComponent<MeshFilter>().mesh = _ressource.Mesh;
+            GetComponent<MeshCollider>().sharedMesh = _ressource.Mesh;
+            GetComponent<Renderer>().material.color = _ressource.Color;
             _priceText.SetText(_ressource.Price.ToString());
         }
         else
         {
-            _priceText.SetText("");
-            Destroy(this.gameObject);
+            Destroy(_priceText.gameObject);
+            Destroy(gameObject);
         }
     }
 
     void OnMouseUpAsButton()
     {
-        Debug.Log("Buy " + _ressource.Name);
-        _bank.Buy(_ressource);
+        if (_bank.Buy(_ressourceIndex))
+            EventRelay.Instance.RaiseBuyRessource(_ressourceIndex, true);
     }
 }

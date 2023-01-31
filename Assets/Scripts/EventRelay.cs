@@ -6,13 +6,31 @@ using UnityEngine.Events;
 
 public class EventRelay : MonoBehaviourPun
 {
-    [SerializeField] private UnityEvent<int, bool> _testEvent;
+    private static EventRelay _instance;
+
+    [SerializeField] private UnityEvent<int> _onBuyRessource;
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+    public static EventRelay Instance
+    {
+        get
+        {
+            if (_instance == null)
+                Debug.LogError("No instance of event relay");
+
+            return _instance;
+        }
+    }
 
     [PunRPC]
-    public void RaiseTest(int value, bool remote)
+    public void RaiseBuyRessource(int ressourceIndex, bool isLocal)
     {
-        _testEvent.Invoke(value, remote);
-        if (!remote)
-            photonView.RPC("RaiseTest", RpcTarget.Others, value, true);
+        _onBuyRessource.Invoke(ressourceIndex);
+        if (isLocal)
+            photonView.RPC("RaiseBuyRessource", RpcTarget.Others, ressourceIndex, false);
     }
 }
