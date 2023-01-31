@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Basilic
   _mesh: {fileID: -8707441474030730945, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
   _price: 3
+  _color: {r: 0.34901962, g: 0.5686275, b: 0.05882353, a: 0}

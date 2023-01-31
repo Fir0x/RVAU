@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Stardust
   _mesh: {fileID: -8707441474030730945, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
   _price: 15
+  _color: {r: 1, g: 0.9243814, b: 0, a: 0}
