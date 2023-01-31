@@ -3,32 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
-public class MarketRessource : MonoBehaviour
+public class GrimoireBuyableRessources : MonoBehaviour
 {
     [SerializeField] private Ressource _ressource;
-    [SerializeField] private TMP_Text _priceText;
-    [SerializeField] private Bank _bank;
+    [SerializeField] private TMP_Text _nameText;
 
     private void Start()
     {
         if (_ressource)
         {
             this.GetComponent<MeshFilter>().mesh = _ressource.Mesh;
-            this.GetComponent<MeshCollider>().sharedMesh = _ressource.Mesh;
             this.GetComponent<Renderer>().material.color = _ressource.Color;
-            _priceText.SetText(_ressource.Price.ToString());
+            _nameText.SetText(_ressource.Name);
         }
         else
         {
-            _priceText.SetText("");
+            _nameText.SetText("");
             Destroy(this.gameObject);
         }
-    }
-
-    void OnMouseUpAsButton()
-    {
-        Debug.Log("Buy " + _ressource.Name);
-        _bank.Buy(_ressource);
     }
 }
