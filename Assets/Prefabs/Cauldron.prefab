@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7586985363756543262}
   - component: {fileID: 4549671792463387360}
   - component: {fileID: 6954357013348115656}
+  - component: {fileID: 1632504304}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1632504304
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252443276697712871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 72713781330414003, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
 --- !u!1 &4535764997597394097
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e0d7d7086bb694495bd48856faa0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderer: {fileID: 0}
+  _liquidRenderer: {fileID: 4449134430525330250}
 --- !u!1 &6260156922650821937
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +157,6 @@ GameObject:
   - component: {fileID: 8132876536538399554}
   - component: {fileID: 5203057408983793759}
   - component: {fileID: 6203225356150879202}
-  - component: {fileID: 5151969581091790079}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -188,19 +202,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2560828187901794578, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
---- !u!114 &5151969581091790079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6260156922650821937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4e0d7d7086bb694495bd48856faa0e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _renderer: {fileID: 0}
 --- !u!1 &7802589828541134976
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8099685238163665117}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: -0.017}
   m_LocalScale: {x: 0.68, y: 0.68, z: 0.68}
   m_ConstrainProportionsScale: 1
   m_Children: []
