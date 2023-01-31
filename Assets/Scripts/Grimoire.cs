@@ -6,6 +6,8 @@ using TMPro;
 
 public class Grimoire : MonoBehaviour
 {
+    [SerializeField] private GameObject[] _ingredientPages;
+    [SerializeField] private GameObject _recipePage;
     [SerializeField] private RecipeBook _recipeBook;
     [SerializeField] private TMP_Text _name;
     [SerializeField] private Image _icon;
@@ -15,31 +17,56 @@ public class Grimoire : MonoBehaviour
 
     private List<Potion> _recipes;
     private int _currentPage = 0;
+    private int _totalPages = 0;
 
     private const int _maxIngredients = 7;
 
     void SetPage()
     {
-        Potion potion = _recipes[_currentPage];
-        _name.SetText(potion.Name);
-        _icon.sprite = potion.Icon;
+        // If the current page is an ingredient page
+        if (_currentPage < _ingredientPages.Length) {
+            // Show the current ingredient page
+            _ingredientPages[_currentPage].SetActive(true);
 
-        string recipe = "";
+            // Hide the other ingredient pages and the recipe page
+            for (int i = 0; i < _ingredientPages.Length; i++)
+                if (i != _currentPage)
+                    _ingredientPages[i].SetActive(false);
 
-        if (potion.Recipe.Count > _maxIngredients)
-            throw new System.Exception("A potion cannot have more ingredients than displayable by the grimoire.");
+            _recipePage.SetActive(false);
+        }
+        // If the current page is a recipe page
+        else
+        {
+            // Set the recipe page
+            Potion potion = _recipes[_currentPage - _ingredientPages.Length];
+            _name.SetText(potion.Name);
+            _icon.sprite = potion.Icon;
 
-        for (int i = 0; i < potion.Recipe.Count; i++)
-            recipe += potion.Recipe[i].Count + "x " + potion.Recipe[i].Ingredient.Name + "\n";
+            string recipe = "";
 
-        _ingredients.SetText(recipe);
+            if (potion.Recipe.Count > _maxIngredients)
+                throw new System.Exception("A potion cannot have more ingredients than displayable by the grimoire.");
 
+            for (int i = 0; i < potion.Recipe.Count; i++)
+                recipe += potion.Recipe[i].Count + "x " + potion.Recipe[i].Ingredient.Name + "\n";
+
+            _ingredients.SetText(recipe);
+
+            // Show the recipe page
+            _recipePage.SetActive(true);
+
+            // Hide the ingredient pages
+            for (int i = 0; i < _ingredientPages.Length; i++)
+                _ingredientPages[i].SetActive(false);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
         _recipes = _recipeBook.Recipes;
+        _totalPages = _ingredientPages.Length + _recipes.Count;
         SetPage();
     }
 
@@ -53,7 +80,7 @@ public class Grimoire : MonoBehaviour
     {
         _currentPage--;
         if (_currentPage < 0)
-            _currentPage = _recipes.Count - 1;
+            _currentPage = _totalPages - 1;
 
         SetPage();
     }
@@ -61,7 +88,7 @@ public class Grimoire : MonoBehaviour
     void NextPage()
     {
         _currentPage++;
-        if (_currentPage >= _recipes.Count)
+        if (_currentPage >= _totalPages)
             _currentPage = 0;
 
         SetPage();

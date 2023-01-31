@@ -20,7 +20,7 @@ MonoBehaviour:
     _count: 2
   - _ingredient: {fileID: 11400000, guid: dd60a5ad3569c8741a6be2e29c1cbc94, type: 2}
     _count: 2
-  - _ingredient: {fileID: 11400000, guid: 7da8fd14478b7894eb44365a1d0355d6, type: 2}
+  - _ingredient: {fileID: 11400000, guid: 6bb34556710c9f34ea41ec85502fc911, type: 2}
     _count: 1
   - _ingredient: {fileID: 11400000, guid: 1e11d595338979e49a54bdff3f207e17, type: 2}
     _count: 1
