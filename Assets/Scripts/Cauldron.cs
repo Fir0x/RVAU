@@ -13,6 +13,7 @@ public class Cauldron : MonoBehaviour
     [SerializeField] private Color _failColor;
 
     private PotionInstance _potionFlask;
+    private GrabGravityInteraction _grabbable;
     [SerializeField] private Transform _flaskWaitPosition;
 
     [Header("Debug")]
@@ -56,6 +57,8 @@ public class Cauldron : MonoBehaviour
                     _potionFlask = potionInstance;
                     _potionFlask.Fly();
                     other.gameObject.transform.position = _flaskWaitPosition.position;
+                    _grabbable = other.GetComponent<GrabGravityInteraction>();
+                    _grabbable.Subscribe(ClearCauldron);
                     StartCoroutine(ProducePotion());
                 }
             }
@@ -99,16 +102,19 @@ public class Cauldron : MonoBehaviour
         _potionFlask.SetPotion(_createdPotion);
     }
 
-    public void OnTriggerExit()
+    public void ClearCauldron()
     {
         if (_isBrewing)
             return;
 
+        _grabbable.Unsubscribe(ClearCauldron);
         _content.Clear();
         _liquidMaterial.SetFloat("_IsPotion", 0);
         _potionFlask.Unfly();
         _potionFlask.SetPotion(_createdPotion);
         _createdPotion = null;
+
+        _grabbable = null;
     }
 
     private void OnDrawGizmos()

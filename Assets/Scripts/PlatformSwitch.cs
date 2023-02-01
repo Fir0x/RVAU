@@ -22,7 +22,6 @@ public class PlatformSwitch : MonoBehaviour
         if (_platform == Platform.VR)
             Destroy(gameObject);
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
 #endif
     }
 }
