@@ -10,7 +10,7 @@ public class FlaskSpawner : MonoBehaviour
 
     public void SpawnFlask()
     {
-        GameObject flask = Instantiate(_flaskPrefab, transform.position, transform.rotation);
+        GameObject flask = Instantiate(_flaskPrefab, transform.position, transform.rotation, transform.parent);
         _flaskCollider = flask.GetComponent<BoxCollider>();
     }
 

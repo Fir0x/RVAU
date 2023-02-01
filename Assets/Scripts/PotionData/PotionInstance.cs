@@ -5,7 +5,7 @@ using UnityEngine;
 public class PotionInstance : MonoBehaviour
 {
     private Rigidbody _rb;
-    private Potion _potionData;
+    [SerializeField] private Potion _potionData;
     [SerializeField] private MeshRenderer _liquidRenderer;
     private Material _liquidMaterial;
 

@@ -26,3 +26,4 @@ MonoBehaviour:
   - _ingredient: {fileID: 11400000, guid: 1e11d595338979e49a54bdff3f207e17, type: 2}
     _count: 1
   _productionDuration: 5
+  _price: 130
