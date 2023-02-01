@@ -35,6 +35,7 @@ public class RessourceInstance : MonoBehaviour
         {
             _ressourceData = (_ressourceData as CrushableRessource).EndRessource;
             _meshFilter.mesh = _ressourceData.Mesh;
+            _meshCollider.sharedMesh = _ressourceData.Mesh;
         }
 
         _isCrushed = true;
