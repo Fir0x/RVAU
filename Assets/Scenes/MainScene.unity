@@ -689,6 +689,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 313750371953847274, guid: 9806ac06603afcb43a73499c3829685f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313750371953847274, guid: 9806ac06603afcb43a73499c3829685f, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -2742,9 +2746,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3247756129229201230, guid: 520c06dca1cc75a43a59d0c3e65b0c8d, type: 3}
-      propertyPath: _flaskPrefab
-      value: 
-      objectReference: {fileID: 4611470250491278606, guid: db6124547701f204d899465f956e3faa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520c06dca1cc75a43a59d0c3e65b0c8d, type: 3}

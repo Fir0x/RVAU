@@ -37,7 +37,7 @@ public class Cauldron : MonoBehaviour
         if (ressourceInstance != null)
         {
             AddIngredient(ressourceInstance.RessourceData);
-            Destroy(other.gameObject);
+            Destroy(other.transform.parent.parent);
         }
         else
         {
@@ -99,15 +99,16 @@ public class Cauldron : MonoBehaviour
         _potionFlask.SetPotion(_createdPotion);
     }
 
-    public Potion RetrievePotion()
+    public void OnTriggerExit()
     {
         if (_isBrewing)
-            return null;
+            return;
 
+        _content.Clear();
         _liquidMaterial.SetFloat("_IsPotion", 0);
         _potionFlask.Unfly();
-
-        return _createdPotion;
+        _potionFlask.SetPotion(_createdPotion);
+        _createdPotion = null;
     }
 
     private void OnDrawGizmos()
