@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127188
+  m_Name: pb_Mesh122032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791795750}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9279d4066f1c19b43a6d93b8ef19e422, type: 3}
   m_Name: 
@@ -992,11 +992,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8344fe3469878442a71a3483e20a083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recipeBook: {fileID: 0}
+  _recipeBook: {fileID: 11400000, guid: fc5928e659427dc4890cf3af11188453, type: 2}
   _ressourceList:
   - {fileID: 11400000, guid: 136ab847d907fdd47b4a7ddf110c64f0, type: 2}
   - {fileID: 11400000, guid: b0c90c7d070a61f409feb68c74530293, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ca2ca6ca7025650468481ac905aed471, type: 2}
   - {fileID: 11400000, guid: 6bb34556710c9f34ea41ec85502fc911, type: 2}
   - {fileID: 11400000, guid: 93202d4b9c392084ea2b4b09221b0c47, type: 2}
   - {fileID: 11400000, guid: 7ca14418d723cc54aa7a34fd424db8d8, type: 2}

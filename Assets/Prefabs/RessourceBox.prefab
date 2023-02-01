@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 4989430773271173031}
   _ressourcePrefab: {fileID: 4221369557640623853, guid: d0fd3b79ec165e043a0d53ca8d40e937, type: 3}
-  _ressourceData: {fileID: 0}
   _debugSize: 0.02
 --- !u!1 &5543260890059709473
 GameObject:
@@ -116,7 +115,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 995be1e9ac5bca44a80f323f89a5547a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

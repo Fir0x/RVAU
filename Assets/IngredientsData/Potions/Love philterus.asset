@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Love philterus
   _icon: {fileID: 21300000, guid: 8e84af3e10e00d649842a8dcd24f878c, type: 3}
-  _material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  _topColor: {r: 1, g: 0.21568628, b: 0.40392157, a: 0}
+  _baseColor: {r: 1, g: 0, b: 0.23921569, a: 0}
   _recipe:
   - _ingredient: {fileID: 11400000, guid: 8bfda3597b8436d45a80f3ece43b96f9, type: 2}
     _count: 2
