@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68174
+  m_Name: pb_Mesh70418
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2777,5 +2777,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3247756129229201230, guid: 520c06dca1cc75a43a59d0c3e65b0c8d, type: 3}
+      propertyPath: _flaskPrefab
+      value: 
+      objectReference: {fileID: 4611470250491278606, guid: db6124547701f204d899465f956e3faa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520c06dca1cc75a43a59d0c3e65b0c8d, type: 3}
