@@ -10,5 +10,9 @@ public class ClickButton : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         SceneManager.UnloadSceneAsync(0);
+#if UNITY_STANDALONE_WIN
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+#endif
     }
 }
