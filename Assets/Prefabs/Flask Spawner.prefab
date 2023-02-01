@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3247756129229201216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.899, y: -0.43799996, z: 0.507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -58,4 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e022a3e99ae3341814a64c236c87e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flaskPrefab: {fileID: 4611470250491278606, guid: 8c7fe583bdef6934399aef4b06bd8122, type: 3}
+  _flaskPrefab: {fileID: 4611470250491278606, guid: db6124547701f204d899465f956e3faa, type: 3}
