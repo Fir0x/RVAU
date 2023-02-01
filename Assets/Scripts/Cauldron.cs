@@ -100,6 +100,9 @@ public class Cauldron : MonoBehaviour
         _liquidMaterial.SetFloat("_IsBrewing", 0);
 
         _potionFlask.SetPotion(_createdPotion);
+
+        if (_createdPotion == null)
+            ClearCauldron();
     }
 
     public void ClearCauldron()
@@ -107,11 +110,16 @@ public class Cauldron : MonoBehaviour
         if (_isBrewing)
             return;
 
-        _grabbable.Unsubscribe(ClearCauldron);
+        if (_grabbable)
+            _grabbable.Unsubscribe(ClearCauldron);
         _content.Clear();
         _liquidMaterial.SetFloat("_IsPotion", 0);
-        _potionFlask.Unfly();
-        _potionFlask.SetPotion(_createdPotion);
+        //_potionFlask.Unfly();
+
+        if (_createdPotion == null)
+            Destroy(_potionFlask.gameObject);
+        else
+            _potionFlask.SetPotion(_createdPotion);
         _createdPotion = null;
 
         _grabbable = null;
