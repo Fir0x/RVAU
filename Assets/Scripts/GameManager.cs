@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
 #if UNITY_ANDROID
         if (ressourceIndex < 5)
-            _crushableRessourceBox.SpawnRessource(_ressourceList[ressourceIndex]);
+            _endRessourceBox.SpawnRessource(_ressourceList[ressourceIndex]);
         else
             _crushableRessourceBox.SpawnRessource(_ressourceList[ressourceIndex]);
 #endif
