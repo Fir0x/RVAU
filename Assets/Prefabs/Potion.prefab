@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b851e20d19e5947b4a64870dfed840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _potionData: {fileID: 0}
   _liquidRenderer: {fileID: 7273484857299934013}
   _flightRotationSpeed: 50
 --- !u!114 &1618137403
