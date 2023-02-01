@@ -20,12 +20,10 @@ public class Bank : MonoBehaviour
         {
             _gold -= ressource.Price;
             _goldCounter.SetText(_gold.ToString());
-            Debug.Log("Gold: " + _gold);
             return true;
         }
         else
         {
-            Debug.Log("Not enough gold");
             return false;
         }
     }

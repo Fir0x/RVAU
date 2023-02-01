@@ -44,7 +44,6 @@ public class Cauldron : MonoBehaviour
             var potionInstance = other.GetComponent<PotionInstance>();
             if (potionInstance != null)
             {
-                Debug.Log("Hello popo");
                 // If the potion is not empty, add its content to the cauldron
                 if (potionInstance.GetPotionData() != null)
                 {

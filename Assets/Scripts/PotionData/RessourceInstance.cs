@@ -48,7 +48,7 @@ public class RessourceInstance : MonoBehaviour
         _ressourceData = ressourceData;
         _meshFilter.mesh = _ressourceData.Mesh;
         _meshCollider.sharedMesh = _ressourceData.Mesh;
-        _material.SetColor("Color", _ressourceData.Color);
+        _material.SetColor("_Color", _ressourceData.Color);
     }
 
     public void Crush()
