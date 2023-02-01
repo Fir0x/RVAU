@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5382345999260361044}
   - component: {fileID: 3151200903403578020}
   - component: {fileID: 1893061351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726896773546548170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,8 @@ GameObject:
   - component: {fileID: 684146743}
   - component: {fileID: 684146745}
   - component: {fileID: 684146744}
-  m_Layer: 0
+  - component: {fileID: 7801129955650436208}
+  m_Layer: 6
   m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +214,19 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &7801129955650436208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611470250491278606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b851e20d19e5947b4a64870dfed840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _liquidRenderer: {fileID: 7273484857299934013}
 --- !u!1 &4993476094802372162
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +238,7 @@ GameObject:
   - component: {fileID: 7115747398299401608}
   - component: {fileID: 9104075961792520451}
   - component: {fileID: 7273484857299934013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +321,7 @@ GameObject:
   - component: {fileID: 6233539066388876868}
   - component: {fileID: 3570687921257995479}
   - component: {fileID: 3337133772684984919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stopper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

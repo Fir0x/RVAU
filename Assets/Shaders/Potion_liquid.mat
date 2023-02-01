@@ -47,10 +47,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fill_percentage: 0.514
+    - _Fill_percentage: 0.537
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _Base_color: {r: 64, g: 0, b: 0, a: 0}
+    - _Range: {r: -0.1, g: 0.1, b: 0, a: 0}
     - _Top_color: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

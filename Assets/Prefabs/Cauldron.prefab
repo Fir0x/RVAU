@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7586985363756543262}
   - component: {fileID: 4549671792463387360}
   - component: {fileID: 6954357013348115656}
-  - component: {fileID: 1632504304}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1632504304
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252443276697712871}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 72713781330414003, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
 --- !u!1 &4535764997597394097
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +114,7 @@ Transform:
   - {fileID: 4843379357627807834}
   - {fileID: 7586985363756543262}
   - {fileID: 8132876536538399554}
+  - {fileID: 228092843963955198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,7 +130,7 @@ GameObject:
   - component: {fileID: 5203057408983793759}
   - component: {fileID: 6203225356150879202}
   - component: {fileID: 8270297721855293158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _liquidRenderer: {fileID: 0}
+  _flaskWaitPosition: {fileID: 228092843963955198}
+  _debugRadius: 0.03
 --- !u!1 &7802589828541134976
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +247,7 @@ GameObject:
   - component: {fileID: 448770835605529246}
   - component: {fileID: 5700879620396918889}
   - component: {fileID: 4449134430525330250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,3 +319,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8899482880793030977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228092843963955198}
+  m_Layer: 0
+  m_Name: FlaskFlyPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &228092843963955198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8899482880793030977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.373, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7163342251975690386}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
