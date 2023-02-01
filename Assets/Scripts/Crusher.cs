@@ -13,22 +13,16 @@ public class Crusher : MonoBehaviour
         if (ressourceInstance == null)
             return;
 
-        Debug.Log("OnEnterTrigger");
-
         AddRessource(ressourceInstance);
     }
 
-/*    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Hello Exit");
         var otherRessourceInstance = other.GetComponent<RessourceInstance>();
-        if (otherRessourceInstance == null)
-            return;
 
         if (otherRessourceInstance == _processedRessource)
             _processedRessource = null;
-
-    }*/
+    }
     
     public void AddRessource(RessourceInstance ressource)
     {
