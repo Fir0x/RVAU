@@ -10,6 +10,7 @@ public class Grimoire : MonoBehaviour
     [SerializeField] private GameObject _recipePage;
     [SerializeField] private RecipeBook _recipeBook;
     [SerializeField] private TMP_Text _name;
+    [SerializeField] private TMP_Text _price;
     [SerializeField] private Image _icon;
     [SerializeField] private TMP_Text _ingredients;
     [SerializeField] private Button _previousPageButton;
@@ -60,6 +61,9 @@ public class Grimoire : MonoBehaviour
             // Hide the ingredient pages
             for (int i = 0; i < _ingredientPages.Length; i++)
                 _ingredientPages[i].SetActive(false);
+
+            // Price
+            _price.SetText(potion.Price.ToString());
         }
     }
 
