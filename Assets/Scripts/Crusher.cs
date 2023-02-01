@@ -13,6 +13,8 @@ public class Crusher : MonoBehaviour
         if (ressourceInstance == null)
             return;
 
+        Debug.Log("OnEnterTrigger");
+
         AddRessource(ressourceInstance);
     }
 
@@ -27,6 +29,7 @@ public class Crusher : MonoBehaviour
             _processedRessource = null;
 
     }*/
+    
     public void AddRessource(RessourceInstance ressource)
     {
         if (_processedRessource != null || ressource.RessourceType != Ingredient.Type.CrushableRessource)
@@ -35,18 +38,22 @@ public class Crusher : MonoBehaviour
         _crushingDuration = (ressource.RessourceData as CrushableRessource).CrushingDuration;
         _processedRessource = ressource;
 
-        ressource.GetComponent<Rigidbody>().isKinematic = true;
-        ressource.transform.position = transform.position;
+
+        ressource.transform.position = new Vector3(-0.859f, 0.605f, 0.3788981f);
         ressource.transform.rotation = transform.rotation;
 
-        StartCoroutine(CrushIngredient());
-        // gravity ?
-        // ressource.GetComponent<Rigidbody>().isKinematic = false;
+        ressource.Fly();
+
+        StartCoroutine(CrushIngredient(ressource));
     }
 
-    public IEnumerator CrushIngredient()
+    public IEnumerator CrushIngredient(RessourceInstance ressource)
     {
         yield return new WaitForSeconds(_crushingDuration);
         _processedRessource.Crush();
+
+        ressource.Unfly();
+
+
     }
 }
