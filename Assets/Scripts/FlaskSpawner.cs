@@ -6,12 +6,13 @@ public class FlaskSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _flaskPrefab;
     
-    private BoxCollider _flaskCollider;
+    private MeshCollider _flaskCollider;
 
     public void SpawnFlask()
     {
-        GameObject flask = Instantiate(_flaskPrefab, transform.position, transform.rotation, transform.parent);
-        _flaskCollider = flask.GetComponent<BoxCollider>();
+        GameObject flask = Instantiate(_flaskPrefab, transform.position, Quaternion.identity, transform.parent);
+        flask.transform.Rotate(-90, 0, 0);
+        _flaskCollider = flask.GetComponent<MeshCollider>();
     }
 
     // At the start of the game, spawn a flask
