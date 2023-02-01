@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Pesto
   _icon: {fileID: 21300000, guid: 0cab84be3c7df0a40a926b429edb7e63, type: 3}
-  _material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  _topColor: {r: 0.25882354, g: 0.91764706, b: 0.6039216, a: 0}
+  _baseColor: {r: 0.09411765, g: 0.8235294, b: 0.5686275, a: 0}
   _recipe:
   - _ingredient: {fileID: 11400000, guid: 136ab847d907fdd47b4a7ddf110c64f0, type: 2}
     _count: 3
