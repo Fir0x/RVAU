@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0259fcdf7e5cb014c925c9989978bbd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 0}
+  _ressource: {fileID: 11400000, guid: 93202d4b9c392084ea2b4b09221b0c47, type: 2}
   _nameText: {fileID: 832944510}
 --- !u!1 &252604958
 GameObject:
@@ -4459,7 +4459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0259fcdf7e5cb014c925c9989978bbd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressource: {fileID: 11400000, guid: 93202d4b9c392084ea2b4b09221b0c47, type: 2}
+  _ressource: {fileID: 11400000, guid: ca2ca6ca7025650468481ac905aed471, type: 2}
   _nameText: {fileID: 1889351751}
 --- !u!1 &1473383492
 GameObject:
@@ -6448,7 +6448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca632e87a0bba4419e32d0e851024d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ressourceIndex: -1
+  _ressourceIndex: 2
   _priceText: {fileID: 313750372190728229}
   _bank: {fileID: 313750372226609949}
 --- !u!1 &313750371953847275
