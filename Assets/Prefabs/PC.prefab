@@ -10295,6 +10295,7 @@ MonoBehaviour:
   - {fileID: 313750373411317877}
   - {fileID: 313750373104197531}
   - {fileID: 313750373829154379}
+  _bank: {fileID: 313750372226609949}
 --- !u!1 &313750373604865349
 GameObject:
   m_ObjectHideFlags: 0

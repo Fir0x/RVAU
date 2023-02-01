@@ -42,6 +42,11 @@ public class PotionInstance : MonoBehaviour
         _liquidMaterial.SetColor("_Base_color", _potionData.BaseColor);
     }
 
+    public Potion GetPotionData()
+    {
+        return _potionData;
+    }
+
     public void Fly()
     {
         _rb.isKinematic = true;

@@ -44,10 +44,20 @@ public class Cauldron : MonoBehaviour
             var potionInstance = other.GetComponent<PotionInstance>();
             if (potionInstance != null)
             {
-                _potionFlask = potionInstance;
-                _potionFlask.Fly();
-                other.gameObject.transform.position = _flaskWaitPosition.position;
-                StartCoroutine(ProducePotion());
+                // If the potion is not empty, add its content to the cauldron
+                if (potionInstance.GetPotionData() != null)
+                {
+                    AddIngredient(potionInstance.GetPotionData());
+                    Destroy(other.gameObject);
+                }
+                // If the potion is empty, fill it with the cauldron content
+                else
+                {
+                    _potionFlask = potionInstance;
+                    _potionFlask.Fly();
+                    other.gameObject.transform.position = _flaskWaitPosition.position;
+                    StartCoroutine(ProducePotion());
+                }
             }
         }
 

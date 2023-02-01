@@ -10,6 +10,9 @@ public class RessourceInstance : MonoBehaviour
     private MeshFilter _meshFilter;
     private Material _material;
     private MeshCollider _meshCollider;
+    private Rigidbody _rb;
+
+    [SerializeField] private float _flightRotationSpeed = 50;
 
     public Ressource RessourceData { get { return _ressourceData; } }
     public Ingredient.Type RessourceType { get { return _ressourceData.IngredientType; } }
@@ -19,6 +22,25 @@ public class RessourceInstance : MonoBehaviour
         _meshFilter = GetComponent<MeshFilter>();
         _material = GetComponent<MeshRenderer>().material;
         _meshCollider = GetComponent<MeshCollider>();
+        _rb = GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        if (!_rb.useGravity)
+            transform.RotateAround(transform.position, Vector3.up, _flightRotationSpeed * Time.deltaTime);
+    }
+
+    public void Fly()
+    {
+        _rb.isKinematic = true;
+        _rb.useGravity = false;
+        transform.Rotate(Vector3.right * 30);
+    }
+
+    public void Unfly()
+    {
+        _rb.isKinematic = false;
+        _rb.velocity = Vector3.zero;
     }
 
     public void SetRessource(Ressource ressourceData)
