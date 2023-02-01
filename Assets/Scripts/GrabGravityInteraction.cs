@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class GrabGravityInteraction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private OVRGrabbable _grabbable;
+    private Rigidbody _rb;
+
+    private void Awake()
     {
-        
+        _grabbable = GetComponent<OVRGrabbable>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (transform.GetComponent<OVRGrabbable>().isGrabbed)
-            transform.GetComponent<Rigidbody>().useGravity = true;
+        if (_grabbable != null && _grabbable.isGrabbed)
+            _rb.useGravity = true;
     }
 }
