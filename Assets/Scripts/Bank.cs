@@ -29,4 +29,9 @@ public class Bank : MonoBehaviour
             return false;
         }
     }
+
+    public void CreditGold(int gold)
+    {
+        _gold += gold;
+    }
 }

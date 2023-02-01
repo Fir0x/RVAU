@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh122032
+  m_Name: pb_Mesh206066
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -865,6 +865,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9806ac06603afcb43a73499c3829685f, type: 3}
+--- !u!114 &1070094787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 313750373572339571, guid: 9806ac06603afcb43a73499c3829685f, type: 3}
+  m_PrefabInstance: {fileID: 1070094786}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904bd49a6303c6242bbd6df5f5fee3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1180480907
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +887,8 @@ GameObject:
   - component: {fileID: 1180480908}
   - component: {fileID: 1180480911}
   - component: {fileID: 1180480910}
-  - component: {fileID: 1180480909}
+  - component: {fileID: 1180480912}
+  - component: {fileID: 1180480913}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -892,27 +904,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180480907}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2.898, y: -0.48, z: -2.171}
-  m_LocalScale: {x: 0.68, y: 1.11, z: 0.68}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 3.015, y: -0.48, z: -2.171}
+  m_LocalScale: {x: 1.78, y: 1.78, z: 1.78}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 791795752}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!64 &1180480909
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180480907}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1180480910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -933,7 +931,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4b83f30b438baee4ca1aff88018ab343, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -963,6 +961,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180480907}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1180480912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180480907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.99999994, z: 6.1232336e-17}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0.00000023841858}
+--- !u!64 &1180480913
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180480907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2560828187901794578, guid: 9667cac6dec82974b8fa0f581d75ac1e, type: 3}
 --- !u!1 &1416380702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1324,21 @@ MonoBehaviour:
       - m_Target: {fileID: 1416380703}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SpawnRessource
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onSellPotion:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1070094787}
+        m_TargetAssemblyTypeName: Commands, Assembly-CSharp
+        m_MethodName: TrySellGuid
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
