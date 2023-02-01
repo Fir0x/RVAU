@@ -26,7 +26,7 @@ public class Potion : Ingredient
 
     public bool CheckRecipe(List<RecipeElement> recipeToTest)
     {
-        if (recipeToTest.Count != _recipe.Count)
+        if (recipeToTest == null || recipeToTest.Count != _recipe.Count)
             return false;
 
         foreach (RecipeElement element in recipeToTest)

@@ -9,7 +9,8 @@ public class Cauldron : MonoBehaviour
     private bool _isBrewing = false;
 
     [SerializeField] private MeshRenderer _liquidRenderer;
-    private Material _material;
+    private Material _liquidMaterial;
+    [SerializeField] private Color _failColor;
 
     private PotionInstance _potionFlask;
     [SerializeField] private Transform _flaskWaitPosition;
@@ -22,8 +23,8 @@ public class Cauldron : MonoBehaviour
         if (_liquidRenderer == null)
             return;
 
-        _material = _liquidRenderer.material;
-        _material.SetInteger("_IsPotion", 0);
+        _liquidMaterial = _liquidRenderer.material;
+        _liquidMaterial.SetFloat("_IsPotion", 0);
         _content = new List<RecipeElement>();
     }
 
@@ -74,16 +75,16 @@ public class Cauldron : MonoBehaviour
         float productionDuration = _createdPotion ? _createdPotion.ProductionDuration : failDuration;
         _isBrewing = true;
 
-        _material.SetInteger("_IsPotion", 1);
-        _material.SetInteger("_IsBrewing", 1);
+        _liquidMaterial.SetFloat("_IsPotion", 1);
+        _liquidMaterial.SetFloat("_IsBrewing", 1);
+
+        if (_createdPotion == null)
+            _liquidMaterial.SetColor("_Potion_color", _failColor);
 
         yield return new WaitForSeconds(productionDuration);
 
-        if (_createdPotion == null)
-            _material.SetColor("_Potion_color", Color.black);
-
         _isBrewing = false;
-        _material.SetInteger("_IsBrewing", 0);
+        _liquidMaterial.SetFloat("_IsBrewing", 0);
 
         _potionFlask.SetPotion(_createdPotion);
     }
@@ -93,7 +94,7 @@ public class Cauldron : MonoBehaviour
         if (_isBrewing)
             return null;
 
-        _material.SetInteger("_IsPotion", 0);
+        _liquidMaterial.SetFloat("_IsPotion", 0);
         _potionFlask.Unfly();
 
         return _createdPotion;

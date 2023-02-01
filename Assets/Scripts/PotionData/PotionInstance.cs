@@ -9,6 +9,8 @@ public class PotionInstance : MonoBehaviour
     [SerializeField] private MeshRenderer _liquidRenderer;
     private Material _liquidMaterial;
 
+    [SerializeField] private float _flightRotationSpeed = 50;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
@@ -18,6 +20,12 @@ public class PotionInstance : MonoBehaviour
     {
         _liquidMaterial = _liquidRenderer.material;
         _liquidMaterial.SetFloat("_Fill_percentage", 0.0f);
+    }
+
+    private void Update()
+    {
+        if (!_rb.useGravity)
+            transform.RotateAround(transform.position, Vector3.up, _flightRotationSpeed * Time.deltaTime);
     }
 
     public void SetPotion(Potion potionData)
@@ -38,12 +46,12 @@ public class PotionInstance : MonoBehaviour
     {
         _rb.isKinematic = true;
         _rb.useGravity = false;
+        transform.Rotate(Vector3.right * 30);
     }
 
     public void Unfly()
     {
         _rb.isKinematic = false;
         _rb.velocity = Vector3.zero;
-        _rb.useGravity = true;
     }
 }

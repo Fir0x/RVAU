@@ -21,4 +21,6 @@ MonoBehaviour:
     _count: 1
   - _ingredient: {fileID: 11400000, guid: b0c90c7d070a61f409feb68c74530293, type: 2}
     _count: 2
+  - _ingredient: {fileID: 11400000, guid: ca2ca6ca7025650468481ac905aed471, type: 2}
+    _count: 1
   _productionDuration: 5
