@@ -4,44 +4,49 @@ using UnityEngine;
 
 public class Crusher : MonoBehaviour
 {
-    private RessourceInstance _processedRessource;
-    private Material _material;
-    private bool _isProducing = false;
+    private RessourceInstance _processedRessource = null;
     private float _crushingDuration;
 
-    private void Awake()
+    private void OnTriggerEnter(Collider other)
     {
-        _material = GetComponent<MeshRenderer>().material;
+        var ressourceInstance = other.GetComponent<RessourceInstance>();
+        if (ressourceInstance == null)
+            return;
+
+        AddRessource(ressourceInstance);
     }
 
-    public bool AddRessource(RessourceInstance ressource)
+/*    private void OnTriggerExit(Collider other)
     {
-        if (_processedRessource != null || _isProducing
-            || ressource.RessourceType == Ingredient.Type.CrushableRessource)
-            return false;
+        Debug.Log("Hello Exit");
+        var otherRessourceInstance = other.GetComponent<RessourceInstance>();
+        if (otherRessourceInstance == null)
+            return;
+
+        if (otherRessourceInstance == _processedRessource)
+            _processedRessource = null;
+
+    }*/
+    public void AddRessource(RessourceInstance ressource)
+    {
+        if (_processedRessource != null || ressource.RessourceType != Ingredient.Type.CrushableRessource)
+            return;
 
         _crushingDuration = (ressource.RessourceData as CrushableRessource).CrushingDuration;
         _processedRessource = ressource;
 
-        return true;
+        ressource.GetComponent<Rigidbody>().isKinematic = true;
+        ressource.transform.position = transform.position;
+        ressource.transform.rotation = transform.rotation;
+
+        StartCoroutine(CrushIngredient());
+        // gravity ?
+        // ressource.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     public IEnumerator CrushIngredient()
     {
-        _isProducing = true;
-        
         yield return new WaitForSeconds(_crushingDuration);
-
-        _isProducing = false;
-    }
-
-    public bool RetrieveCrushedIngredient()
-    {
-        if (_isProducing)
-            return false;
-
         _processedRessource.Crush();
-
-        return true;
     }
 }

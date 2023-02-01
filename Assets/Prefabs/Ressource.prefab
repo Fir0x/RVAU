@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4305515319964624952}
   - component: {fileID: 5493825118124456027}
   - component: {fileID: 1107871381062985478}
+  - component: {fileID: 7249075651203265191}
   m_Layer: 0
   m_Name: Ressource
   m_TagString: Untagged
@@ -146,3 +147,16 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!65 &7249075651203265191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221369557640623853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07161421, y: 0.071614206, z: 0.14322843}
+  m_Center: {x: 0, y: 0, z: 0}
