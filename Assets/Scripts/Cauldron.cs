@@ -37,7 +37,7 @@ public class Cauldron : MonoBehaviour
         if (ressourceInstance != null)
         {
             AddIngredient(ressourceInstance.RessourceData);
-            Destroy(other.transform.parent.parent);
+            Destroy(other.gameObject);
         }
         else
         {
